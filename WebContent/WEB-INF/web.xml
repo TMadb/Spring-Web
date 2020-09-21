@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Spring-Web</display-name>
+  <welcome-file-list>
+    <welcome-file>information.jsp</welcome-file>
+    <welcome-file>information.jsp</welcome-file>
+    <welcome-file>information.jsp</welcome-file>
+    <welcome-file>information.jsp</welcome-file>
+    <welcome-file>information.jsp</welcome-file>
+    <welcome-file>information.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <listener>
+    <!-- 配置监听器的全限定名 -->
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <!-- application的初始化参数 
+       将创建的容器存放到Application中
+       为了解决容器重复创建对象的问题
+  -->
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>
+</web-app>
